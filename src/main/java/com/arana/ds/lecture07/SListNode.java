@@ -1,29 +1,29 @@
 package com.arana.ds.lecture07;
 
-public class ListNode {
-	public int item;
-	public ListNode next;
+public class SListNode {
+	public Object item;
+	public SListNode next;
 	
 	// CONSTRUCTORS	
 	// Constructor a new node
-    public ListNode(int item, ListNode next) {
+    public SListNode(Object item, SListNode next) {
     	this.item = item;
     	this.next = next;
     }
     
     // Construct with null next reference
-    public ListNode(int item){
+    public SListNode(Object item){
     	this(item, null);
     }
     
     // METHODS
     // Insert an item after this
-    public void insertAfter(int item){
-    	this.next = new ListNode(item, this.next);
+    public void insertAfter(Object item){
+    	this.next = new SListNode(item, this.next);
     }
     
     // Finds the nth item in a list 
-    public ListNode nth(int position){
+    public SListNode nth(int position){
     	if (position == 1){
     		return this;
     	// The thing we are looking for does not exists
